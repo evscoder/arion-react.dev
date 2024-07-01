@@ -1,0 +1,9 @@
+.demo-panel {
+  :global([data-modal=modal-window]) {
+    width: 280px;
+  }
+
+  :global([data-modal=modal-body]) {
+    padding-top: 2rem;
+  }
+}

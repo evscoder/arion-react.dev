@@ -1,0 +1,32 @@
+.progress-media {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  line-height: calc(18/15*1em);
+
+  &__title {
+    margin-bottom: 0;
+  }
+
+  &__progressbar {
+    margin-top: 12px;
+    grid-column: span 2;
+    height: 5px;
+    border-radius: 5px;
+    background-color: var(--border-grey-color);
+  }
+
+  &__bar {
+    width: 0;
+    height: 100%;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    animation: progressbarStart 1.2s ease-out forwards;
+    pointer-events: none;
+  }
+}
+
+@keyframes progressbarStart {
+  from {
+    width: 0;
+  }
+}

@@ -1,0 +1,9 @@
+.popperDropdown {
+  pointer-events: none;
+}
+
+.dropdown-items-table {
+  position: static;
+  transform: translateX(calc(-50% + 16px));
+  pointer-events: all;
+}

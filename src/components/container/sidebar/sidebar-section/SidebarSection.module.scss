@@ -1,0 +1,32 @@
+@use '../../../../styles/include/plugins' as *;
+
+.sidebar-section {
+  margin: 2rem 0;
+  padding: 0 1.6rem;
+
+  &,
+  .sidebar:hover &,
+  .sidebar--show & {
+    display: block;
+  }
+
+  @include media('<xl', '>sm-tablet') {
+    display: none;
+  }
+
+  @include media('>xl') {
+    .sidebar-collapse & {
+      display: none;
+    }
+  }
+
+  &__title {
+    margin-bottom: calc(24/15*1em);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: calc(18/15*1em);
+    text-transform: uppercase;
+    color: var(--text-secondary-color);
+    white-space: nowrap;
+  }
+}

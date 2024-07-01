@@ -1,0 +1,88 @@
+@use '../../../styles/modules/dropdown' as *;
+@use '../../ui/dropdown-item/DropdownItem.module.scss' as *;
+
+.dropdown-menu {
+  padding: 6px 0;
+  font-size: 15px;
+  color: inherit;
+  background-color: var(--background-secondary-color);
+  border: 1px solid var(--border-grey-color);
+  border-radius: var(--card-border-radius);
+
+  @extend %dropdownArrow;
+
+  &--right {
+    right: 0;
+    left: auto!important;
+
+    &::before,
+    &::after {
+      left: calc(100% - 22px);
+    }
+  }
+
+  &--fluid {
+    min-width: auto;
+    width: 100%;
+  }
+
+  &__icon {
+    display: inline-flex;
+    vertical-align: middle;
+    justify-content: center;
+    width: 40px;
+    height: 18px;
+    margin-left: -0.55rem;
+    line-height: 1;
+
+    .table__actions & {
+      height: 16px;
+    }
+
+    svg {
+      width: 18px;
+      height: 100%;
+    }
+
+    img {
+      width: 22px;
+      height: auto;
+    }
+  }
+
+  &__divider {
+    margin: 6px 0;
+    border-top: 1px solid var(--border-grey-color);
+  }
+
+  &__link-all {
+    text-align: center;
+    color: var(--text-secondary-color);
+
+    [class*="icon"] {
+      width: 6px;
+      height: 11px;
+      margin-left: 15px;
+    }
+  }
+}
+
+.dropdown-menu--up,
+.dropdown-items--up .dropdown-items__container {
+  &::before,
+  &::after {
+    top: 100%;
+    bottom: auto;
+    border-bottom-width: 0;
+  }
+
+  &::before {
+    border-top-width: 6px;
+    border-top-color: var(--border-grey-color);
+  }
+
+  &::after {
+    border-top-width: 4px;
+    border-top-color: var(--background-secondary-color);
+  }
+}

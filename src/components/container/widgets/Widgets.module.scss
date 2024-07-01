@@ -1,0 +1,13 @@
+@use '../../../styles/include/plugins' as *;
+
+.widgets {
+  --widget-width-min: 280px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--widget-width-min), 1fr));
+  grid-gap: calc(var(--column-gutter) * 2);
+  margin-bottom: calc(var(--column-gutter) * 2);
+
+  @include media ('>lg') {
+    --widget-width-min: 360px;
+  }
+}

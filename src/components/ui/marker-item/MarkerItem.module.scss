@@ -1,0 +1,16 @@
+.marker-item {
+  flex-shrink: 0;
+  align-self: center;
+  display: inline-block;
+  vertical-align: middle;
+  width: 6px;
+  height: 6px;
+  margin-right: 7px;
+  border-radius: 50%;
+
+  &--md {
+    width: 12px;
+    height: 12px;
+    margin-right: 0.9333rem;
+  }
+}

@@ -1,0 +1,18 @@
+.theme-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 13.3333rem;
+  height: 13.3333rem;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: var(--t-base);
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  svg {
+    min-width: 200px;
+  }
+}

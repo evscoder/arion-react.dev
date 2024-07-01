@@ -1,0 +1,27 @@
+@use '../../../../styles/include/animations';
+
+.demo-toggle {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px 0 0 8px;
+  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  cursor: pointer;
+  z-index: 1000;
+  overflow: hidden;
+
+  svg {
+    content: "";
+    width: 52%;
+    height: 52%;
+    animation: infinite rotate 2s linear;
+  }
+}

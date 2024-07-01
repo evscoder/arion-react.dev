@@ -1,0 +1,25 @@
+@use '../../../styles/include/plugins' as *;
+
+.toolbox {
+  margin-bottom: 1.6rem;
+
+  &__left {
+    @include media('<md') {
+      order: 1;
+    }
+  }
+
+  &__status {
+    width: 150px;
+
+    @include media('<sm') {
+      width: 100%;
+    }
+  }
+
+  &__search {
+    @include media('>lg') {
+      min-width: 290px;
+    }
+  }
+}

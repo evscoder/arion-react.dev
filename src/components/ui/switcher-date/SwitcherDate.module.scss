@@ -1,0 +1,92 @@
+.switcher-date {
+  --switcher-button-width: 38px;
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+
+  &__controls {
+    display: inline-flex;
+    min-height: 2.6667rem;
+    border-radius: var(--radius-base);
+    line-height: 1;
+    background-color: var(--background-secondary-color);
+    box-shadow: var(--control-shadow);
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--switcher-button-width);
+    transition: var(--t-base);
+
+    &:hover {
+      background-color: var(--primary-color);
+      color: var(--white-color);
+    }
+
+    &:active {
+      background-color: var(--blue-color-control-1);
+    }
+
+    svg[class*="icon"] {
+      width: 6px;
+      height: 10px;
+    }
+
+    &--prev {
+      border-radius: var(--radius-base) 0 0 var(--radius-base);
+    }
+
+    &--next {
+      border-radius: 0 var(--radius-base) var(--radius-base) 0;
+    }
+  }
+
+  &__input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--border-grey-color);
+    border-top: none;
+    border-bottom: none;
+
+    svg[class*="icon"] {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 14px;
+      width: 22px;
+      height: 24px;
+      margin: auto;
+      padding-bottom: 2px;
+    }
+  }
+
+  &__input {
+    box-sizing: content-box;
+    display: flex;
+    align-items: center;
+    padding: 9px 17px 9px 46px;
+    min-width: 9ch;
+    min-height: 22px;
+    cursor: pointer;
+    transition: var(--t-base);
+
+    &:hover {
+      background-color: var(--control-background-hover);
+    }
+  }
+
+  .select2 {
+    width: 0!important;
+    height: 0!important;
+    overflow: hidden!important;
+  }
+
+  .select2-dropdown {
+    right: 0;
+    left: auto;
+    width: calc(100% - var(--switcher-button-width))!important;
+  }
+}

@@ -1,0 +1,22 @@
+.quotation {
+  display: inline-block;
+  vertical-align: middle;
+
+  svg {
+    vertical-align: top;
+    width: 22px;
+    height: 22px;
+  }
+
+  &--up {
+    color: var(--green-color);
+
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  &--down {
+    color: var(--red-color-2);
+  }
+}

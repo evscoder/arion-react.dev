@@ -1,0 +1,38 @@
+.toggle-search {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  transition: var(--t-base);
+
+  &--module {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+
+    [class*="icon-cross"] {
+      display: none;
+    }
+
+    &.active {
+      [class*="icon-search"] {
+        display: none;
+      }
+
+      [class*="icon-cross"] {
+        display: block;
+      }
+    }
+  }
+
+  &.active {
+    color: var(--primary-color);
+  }
+
+  [class*="icon"] {
+    width: 27px;
+    height: 27px;
+    fill: currentColor;
+  }
+}

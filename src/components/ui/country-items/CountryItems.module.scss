@@ -1,0 +1,51 @@
+@use '../../../styles/include/plugins/mixins' as *;
+
+.country-items {
+  margin: 0 calc(var(--card-gutter-x) * -1) calc(var(--card-pb) * -1);
+}
+
+.country-item {
+  display: grid;
+  min-height: 3.3333rem;
+  align-content: center;
+  grid-template-columns: 1fr 0.7fr auto;
+  border-bottom: 1px solid var(--border-grey-color);
+
+  &:last-child,
+  &:first-child:last-child {
+    border-bottom: none;
+  }
+
+  &__col {
+    align-items: center;
+    padding: 4px .75rem;
+    white-space: nowrap;
+
+    &:first-child {
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+      gap: 8px;
+      padding-left: var(--card-gutter-x);
+    }
+
+    &:last-child {
+      padding-right: var(--card-gutter-x);
+    }
+  }
+
+  &__flag {
+    flex-shrink: 0;
+    width: 28px;
+  }
+
+  &__name {
+    @include text-ellipsis;
+  }
+
+  &__cost {
+    display: inline-block;
+    font-weight: 700;
+    min-width: 6ch;
+  }
+}

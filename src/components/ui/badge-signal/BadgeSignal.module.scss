@@ -1,0 +1,14 @@
+.badge-signal {
+  flex-shrink: 0;
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid var(--background-secondary-color);
+  background-color: var(--red-color);
+  pointer-events: none;
+
+  &--green {
+    background-color: var(--green-color);
+  }
+}

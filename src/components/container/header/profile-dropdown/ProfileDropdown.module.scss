@@ -1,0 +1,60 @@
+@use '../../../../styles/include/plugins' as *;
+@use '../../../ui/dropdown-item/DropdownItem.module.scss' as *;
+
+.profile-dropdown {
+  min-width: 190px;
+  white-space: nowrap;
+  right: 17px!important;
+  left: auto!important;
+  transform: translate3d(0px, 54px, 0)!important;
+
+  @include media('<1440px') {
+    right: 12px!important;
+  }
+
+  @include media('<sm') {
+    right: 18px!important;
+
+    &::before,
+    &::after {
+      left: calc(100% - 14px);
+    }
+  }
+
+  @include media('<xs') {
+    right: 6px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    :global([data-theme=dark]) & {
+      &:hover,
+      &.active {
+        .profile-dropdown__icon {
+          color: var(--text-primary-color);
+        }
+      }
+    }
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    width: 42px;
+    margin-left: -0.55rem;
+    height: 22px;
+    line-height: 1;
+    transition: var(--t-base);
+
+    :global([data-theme=dark]) & {
+      color: var(--text-secondary-color);
+    }
+
+    svg {
+      width: 22px;
+      height: 100%;
+    }
+  }
+}

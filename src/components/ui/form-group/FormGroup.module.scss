@@ -1,0 +1,48 @@
+@use '../../../styles/include/plugins' as *;
+
+.form-group {
+  margin-bottom: 1rem;
+
+  &--lg {
+    margin-bottom: 2rem;
+
+    @include media('<sm') {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &--inline {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+  }
+
+  &--label {
+    margin-bottom: 0.8rem;
+  }
+
+  &__label {
+    margin-top: 0;
+    margin-bottom: 1.0667rem;
+    font-weight: 400;
+    font-size: inherit;
+    color: var(--text-secondary-color);
+
+    &--sm {
+      margin-bottom: 0.8rem;
+      line-height: calc(18/15*1em);
+    }
+
+    .form-group--inline & {
+      margin: 0 8px 0 0;
+      white-space: nowrap;
+
+      &--append {
+        order: 1;
+        margin-right: 0;
+        margin-left: 1rem;
+        color: inherit;
+      }
+    }
+  }
+}

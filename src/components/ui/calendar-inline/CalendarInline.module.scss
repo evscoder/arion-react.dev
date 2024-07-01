@@ -1,0 +1,129 @@
+.calendar-inline {
+  :global(.flatpickr-input) {
+    display: none;
+  }
+
+  :global(.flatpickr-calendar) {
+    width: auto;
+    padding: 0;
+    margin: 0 -11px;
+    border: none;
+    font-size: 1rem;
+    line-height: calc(18/15*1em);
+    background: transparent;
+  }
+
+  :global(.flatpickr-calendar::before),
+  :global(.flatpickr-calendar::after) {
+    display: none;
+  }
+
+  :global(.flatpickr-months) {
+    padding: 0;
+    margin: 0 0 2.2667rem;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+  }
+
+  :global(.flatpickr-month) {
+    font-size: 1.2rem;
+    line-height: calc(21/18*1em);
+  }
+
+  :global(.flatpickr-prev-month),
+  :global(.flatpickr-next-month) {
+    margin: 0!important;
+  }
+
+  :global(.flatpickr-current-month) {
+    pointer-events: none;
+  }
+
+  :global(.numInputWrapper) {
+    margin-left: 1ch;
+    font-weight: 500;
+    color: var(--text-primary-color);
+  }
+
+  :global(.flatpickr-weekdays) {
+    margin-bottom: 18px;
+  }
+
+  :global(span.flatpickr-weekday) {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(16/14*1em);
+  }
+
+  :global(.dayContainer) {
+    grid-template-rows: repeat(6, 39px);
+  }
+
+  :global(.flatpickr-day) {
+    max-width: 32px;
+    height: 32px;
+    line-height: 32px;
+  }
+
+  .cur-year {
+    & {
+      display: none!important;
+    }
+  }
+
+  &__footer {
+    margin: 26px calc(var(--card-gutter-x) * -1) calc(var(--card-pb) * -1);
+    border-top: 1px solid var(--border-grey-color);
+    background-color: var(--card-footer-background);
+    border-radius: 0 0 var(--card-border-radius) var(--card-border-radius);
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem var(--card-gutter-x, 0);
+  }
+
+  &__item {
+    display: flex;
+    flex-flow: column;
+    padding-left: 1rem;
+
+    &--left {
+      text-align: center;
+    }
+  }
+
+  &__day {
+    flex-grow: 1;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: calc(35/30*1em);
+    text-transform: uppercase;
+  }
+
+  &__weekday {
+    vertical-align: top;
+    position: absolute;
+    top: auto;
+    margin-top: -0.7em;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  &__status {
+    flex-grow: 1;
+    white-space: nowrap;
+
+    .circle {
+      display: inline-block;
+      flex-shrink: 0;
+      width: 8px;
+      height: 8px;
+      margin-right: 8px;
+      border-radius: 50%;
+    }
+  }
+}

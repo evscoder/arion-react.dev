@@ -1,0 +1,39 @@
+@use '../../../styles/include/_plugins' as *;
+
+.page-header {
+  margin-bottom: 1rem;
+
+  &--grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, auto));
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &--inline {
+    margin-bottom: 0;
+  }
+
+  &__title {
+    margin-bottom: 0;
+    font-size: 2rem;
+    line-height: calc(35/30*1em);
+
+    .page-header--inline & {
+      font-size: 1.3333rem;
+      line-height: calc(23/20*1em);
+    }
+  }
+
+  &__subtitle {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 1.3333rem;
+    line-height: calc(23/20*1em);
+
+    @include media('<md') {
+      font-size: 15px;
+    }
+  }
+}

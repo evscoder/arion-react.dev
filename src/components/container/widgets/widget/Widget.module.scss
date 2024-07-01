@@ -1,0 +1,130 @@
+@use '../../../../styles/include/plugins' as *;
+
+$chartFontSize: 15;
+
+.widget {
+  flex-grow: 1;
+  position: relative;
+  padding: 1.625rem 2.5rem;
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--card-shadow);
+
+  @include media('<1440px') {
+    padding: 1.625rem 1.6rem;
+  }
+
+  @include media('<xl') {
+    padding: 1.5rem 1.25rem;
+  }
+
+  &::before {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    content: "";
+    background-color: var(--background-secondary-color);
+    border-radius: inherit;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: calc(100% - 40px) 10% 0;
+    z-index: -1;
+    border-radius: inherit;
+    box-shadow: var(--card-shadow-shape);
+  }
+
+  &__wrapper {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include media('<md') {
+      align-items: flex-start;
+    }
+  }
+
+  &__spacer {
+    width: 100%;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: calc(15/20*1em);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: calc(23/20*1em);
+  }
+
+  &__status-title {
+    margin-bottom: 12px;
+
+    @include media('<md') {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__trade-count {
+    vertical-align: middle;
+    margin-right: 4px;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: calc(28/24*1em);
+  }
+
+  &__details {
+    margin-top: 11px;
+    line-height: 1;
+  }
+
+  &__chart {
+    position: relative;
+    font-size: #{$chartFontSize + px};
+
+    @include media('<sm-tablet') {
+      font-size: clamp(5px, 4vw, #{$chartFontSize + px});
+    }
+  }
+
+  &__chart-inner {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__chart-percentage {
+    position: relative;
+    margin-bottom: 4px;
+    font-weight: 500;
+    font-size: calc(30/$chartFontSize*1em);
+    line-height: 1;
+    white-space: nowrap;
+
+    small {
+      position: absolute;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0.5em 0 0 0.25em;
+      font-size: calc(16/30*1em);
+    }
+  }
+
+  &__chart-caption {
+    font-size: calc(13/$chartFontSize*1em);
+    line-height: calc(15/$chartFontSize*1em);
+  }
+
+  &__chart-bar {
+    display: block;
+    width: calc(112/$chartFontSize*1em);
+  }
+}

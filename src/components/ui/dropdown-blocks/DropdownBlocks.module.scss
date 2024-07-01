@@ -1,0 +1,26 @@
+@use '../dropdown-item/DropdownItem.module.scss' as *;
+
+.dropdown-blocks {
+  display: contents;
+
+  &__top {
+    padding-top: 5px;
+    padding-bottom: 11px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__clear-all {
+    margin-left: auto;
+  }
+
+  &__title {
+    font-weight: normal;
+    font-size: 1rem;
+    margin-right: 1rem;
+  }
+
+  &__items {
+    margin-bottom: -0.4rem;
+  }
+}

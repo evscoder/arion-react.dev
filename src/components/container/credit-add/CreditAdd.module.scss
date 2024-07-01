@@ -1,0 +1,14 @@
+.credit-add {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+
+  .form-group {
+    margin-bottom: 2.6667rem;
+  }
+
+  &__submit {
+    padding: var(--card-footer-pt) var(--card-gutter-x) var(--card-footer-pb);
+    margin: auto calc(var(--card-gutter-x) * -1) calc(var(--card-pb, 0) * -1);
+  }
+}

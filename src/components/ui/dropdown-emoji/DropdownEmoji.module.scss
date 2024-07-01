@@ -1,0 +1,19 @@
+.dropdown-emoji {
+  &::before,
+  &::after {
+    display: block!important;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 6px 6px;
+    padding: 10px 16px;
+  }
+
+  &__image {
+    width: 22px;
+    max-width: none;
+    height: auto;
+  }
+}

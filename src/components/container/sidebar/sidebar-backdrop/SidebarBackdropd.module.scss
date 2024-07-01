@@ -1,0 +1,25 @@
+@use '../../../../styles/include/plugins' as *;
+
+.sidebar-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1010;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: var(--backdrop-color);
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--t-base);
+  transition-timing-function: linear;
+
+  :global(.sidebar-show) & {
+    opacity: var(--backdrop-opacity);
+    pointer-events: all;
+  }
+
+  @include media ('<xl', '>sm-tablet') {
+    display: block;
+  }
+}

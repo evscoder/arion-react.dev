@@ -1,0 +1,86 @@
+/* Icons */
+[class^="icon-"] {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.icon-arrow-down {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  color: var(--text-third-color);
+  transition: var(--t-base);
+
+  svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+  }
+}
+
+.sort {
+  flex-shrink: 0;
+  vertical-align: middle;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 22px;
+  height: 22px;
+  color: var(--text-third-color);
+
+  &::before,
+  &::after {
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    margin: 1px 3px;
+    border-style: solid;
+    border-color: transparent;
+  }
+
+  &::before {
+    border-width: 0 4px 5px;
+    border-bottom-color: currentColor;
+  }
+
+  &::after {
+    border-width: 5px 4px 0;
+    border-top-color: currentColor;
+  }
+
+  &--up {
+    &::after {
+      display: none;
+    }
+  }
+
+  &--down {
+    &::before {
+      display: none;
+    }
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.preloader-icon {
+  fill: none;
+  animation: infinite rotate 1s linear;
+
+  circle {
+    stroke: var(--border-grey-color);
+  }
+
+  &__border {
+    stroke: var(--primary-color);
+  }
+}

@@ -1,0 +1,36 @@
+@use '../../../ui/dropdown-item/DropdownItem.module.scss' as *;
+
+.lang-menu {
+  min-width: 84px;
+  margin-left: -1px;
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--all {
+      text-align: center;
+      margin-bottom: -5px;
+      border-radius: 0 0 var(--card-border-radius) var(--card-border-radius);
+    }
+  }
+
+  &__separate {
+    border-top: 1px solid var(--border-grey-color);
+  }
+
+  &__icon {
+    vertical-align: middle;
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+    object-fit: contain;
+  }
+
+  &__text {
+    display: inline-block;
+    vertical-align: middle;
+    text-transform: uppercase;
+  }
+}

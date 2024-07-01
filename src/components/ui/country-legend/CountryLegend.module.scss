@@ -1,0 +1,55 @@
+@use '../../../styles/include/plugins' as *;
+
+.country-legend {
+  --item-bottom-gutter: 1.6rem;
+  --item-gutter-x: 2.6667rem;
+
+  @include media('<sm') {
+    --item-bottom-gutter: 1rem;
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 calc(var(--item-bottom-gutter) * -1) calc(var(--item-gutter-x) * -1);
+
+    @include media ('<sm') {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 var(--item-bottom-gutter) var(--item-gutter-x);
+    white-space: nowrap;
+  }
+
+  &__left {
+    margin-right: 1.6rem;
+  }
+
+  &__marker {
+    display: inline-block;
+    vertical-align: middle;
+    width: 8px;
+    height: 8px;
+    margin-right: 8px;
+    border-radius: 50%;
+  }
+
+  &__name {
+    vertical-align: middle;
+    font-weight: 500;
+  }
+
+  &__quot {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__percentage {
+    vertical-align: middle;
+    color: var(--text-secondary-color);
+  }
+}

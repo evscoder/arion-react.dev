@@ -1,0 +1,22 @@
+@use '../../../../styles/include/plugins' as *;
+
+.card-widgets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gutter-bottom-sm) var(--widget-gutter);
+  margin-bottom: 2rem;
+
+  .card--overview & {
+    gap: var(--gutter-bottom-sm) var(--widget-gutter-2);
+  }
+
+  @include media('>sm-tablet') {
+    .card--lg & {
+      margin-bottom: 2.6667rem;
+    }
+  }
+
+  @include media('<sm') {
+    margin-bottom: 1.5rem;
+  }
+}

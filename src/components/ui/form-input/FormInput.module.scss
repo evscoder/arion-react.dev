@@ -1,0 +1,99 @@
+@use '../../../styles/include/plugins' as *;
+@use '../../../styles/modules/form-input' as *;
+
+.input {
+  display: block;
+  width: 100%;
+  height: 42px;
+  padding: 11px var(--input-gutter-x);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: calc(18/16*1em);
+  font-family: var(--font-family-default);
+  color: inherit;
+  background-color: var(--background-primary-color);
+  border-radius: 5px;
+  border: 1px solid transparent;
+  outline: none;
+  transition: var(--t-base);
+  transition-property: border-color, transform, background-color, opacity;
+
+  &[type="time"] {
+    padding-right: 0;
+
+    &::-webkit-calendar-picker-indicator {
+      width: 32px;
+      height: 36px;
+      background: none;
+      cursor: pointer;
+    }
+  }
+
+  &[type='number'] {
+    -moz-appearance: textfield;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      position: absolute;
+      inset: 0 0 0 auto;
+      height: 30px;
+      margin: auto;
+    }
+  }
+
+  &[type='password'] {
+    letter-spacing: 0.15rem;
+
+    &::placeholder {
+      letter-spacing: normal;
+    }
+  }
+
+  &::placeholder {
+    color: var(--placeholder-color);
+  }
+
+  &:hover {
+    background-color: var(--control-background-hover);
+  }
+
+  &[readonly] {
+    user-select: none;
+  }
+
+  &--edit {
+    display: inline-block;
+    width: auto;
+    background-color: transparent;
+
+    &:focus {
+      background-color: var(--control-background-hover);
+    }
+  }
+
+  .input-group--white & {
+    @extend %input-white;
+  }
+
+  &--fluid {
+    width: 100%;
+
+    ~ .select2 {
+      width: 100%!important;
+    }
+  }
+
+  &--select {
+    cursor: pointer;
+
+    &:focus ~ .dropdown-items {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+    }
+
+    .input-group--white & {
+      background-color: var(--background-secondary-color);
+    }
+  }
+}

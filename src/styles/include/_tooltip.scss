@@ -1,0 +1,117 @@
+[data-tippy-root] {
+    @media (hover: none) {
+        display: none;
+    }
+}
+
+%tooltips-visible {
+    [data-tippy-root] {
+        @media (hover: none) {
+            display: block;
+        }
+    }
+}
+
+.tippy-content {
+    padding: 8px 12px;
+    font-size: 12px;
+    line-height: 120%;
+    border-radius: var(--radius-base);
+    color: var(--text-primary-reverse);
+    background-color: var(--background-secondary-reverse);
+    box-shadow: var(--control-shadow);
+
+    :global([data-theme=dark]) & {
+        color: var(--white-color);
+        background-color: var(--background-secondary-color);
+        border: 1px solid var(--border-grey-color);
+    }
+}
+
+.tippy-arrow {
+    width: calc(var(--tooltip-arrow-size));
+    height: calc(var(--tooltip-arrow-size));
+    z-index: 1;
+
+    &::before,
+    &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        transform-origin: center center!important;
+        transform: rotate(-45deg);
+        border: none;
+        border-radius: 2px;
+    }
+
+    &::before {
+        z-index: 1;
+        background-color: var(--background-secondary-reverse);
+    }
+
+    &::after {
+        position: absolute;
+    }
+
+    :global([data-theme=dark]) & {
+        &::before {
+            background-color: var(--background-secondary-color);
+        }
+
+        &::after {
+            background: repeating-linear-gradient(
+                        -45deg,
+                transparent 0%,
+                transparent 50%,
+                var(--border-grey-color) 50%,
+                var(--border-grey-color) 100%
+            );
+        }
+    }
+}
+
+.tippy-box[data-placement^="top"] > {
+    .tippy-arrow:before {
+        top: calc(calc(50% - 2px));
+    }
+
+    .tippy-arrow:after {
+        top: calc(calc(50% - 1px));
+        transform: rotate(-135deg);
+    }
+}
+.tippy-box[data-placement^="bottom"] > {
+    .tippy-arrow:before {
+        top: auto;
+        bottom: calc(calc(50% - 2px));
+    }
+
+    .tippy-arrow:after {
+        bottom: calc(calc(50% - 1px));
+        transform: rotate(45deg);
+    }
+}
+
+.tippy-box[data-placement^="left"] > {
+    .tippy-arrow:before {
+        right: auto;
+        left: calc(calc(50% - 2px));
+    }
+
+    .tippy-arrow:after {
+        left: calc(calc(50% - 1px));
+        transform: rotate(135deg);
+    }
+}
+
+.tippy-box[data-placement^="right"] > {
+    .tippy-arrow:before {
+        right: calc(calc(50% - 2px));
+        left: auto;
+    }
+
+    .tippy-arrow:after {
+        right: calc(calc(50% - 1px));
+        transform: rotate(-45deg);
+    }
+}

@@ -1,0 +1,68 @@
+/* -----------------------------------
+ * TABLE OF CONTENTS:
+ * Variables
+ * Fonts
+ * Icons
+ * Base
+ * Typography
+ * Buttons
+ * Labels
+ * Badges
+ * Dropdowns
+ * Tooltips
+ * Scrollbars
+ * Widgets
+ * Cards
+ * Forms
+ * Tags
+ * Files Uploads
+ * Charts
+ * Lightbox for Gallery
+ * Page
+ * Tables
+ * Sidebar
+ * Sidebar Panel
+ * Header
+ * Calendar
+ * Breadcrumbs
+ * Pagination
+ * Products
+ * Orders
+ * Order Notes
+ * Order Messages
+ * Customer Account
+ * Cart
+ * Calendar Full
+ * Inbox
+ * Chat
+ * Contacts
+ * Todo
+ * File Manager
+ * Timeline
+ * Authentication
+ ------------------------------------- */
+
+// Dependencies (Frameworks and etc)
+@import '~bootstrap/scss/bootstrap';
+@import "include/plugins";
+
+// Includes
+@import "include/fonts";
+@import "include/variables";
+@import "include/reset";
+@import "include/animations";
+@import "include/extends";
+@import "include/icons";
+@import "include/common";
+@import "include/typography";
+@import "include/tooltip";
+@import "include/scrollbar";
+@import "include/date-picker.scss";
+@import "include/charts";
+@import "include/page";
+
+
+/**
+* Colors theme { selector: html[data-theme="light"], html[data-theme="dark"] }
+*/
+@import "include/theme";

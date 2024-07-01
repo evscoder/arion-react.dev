@@ -1,0 +1,25 @@
+@use '../../../../styles/include/plugins' as *;
+
+.sidebar-menu-collapse {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: var(--background-primary-color);
+
+  @include media('>sm-tablet') {
+    :global([data-sidebar=sidebar]:hover) &,
+    :global([data-sidebar=sidebar][class*=sidebar--show]) & {
+      display: block;
+    }
+  }
+
+  @include media('<xl', '>sm-tablet') {
+    display: none;
+  }
+
+  @include media('>xl') {
+    :global(.sidebar-collapse) & {
+      display: none;
+    }
+  }
+}

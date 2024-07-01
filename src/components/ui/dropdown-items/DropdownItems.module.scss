@@ -1,0 +1,119 @@
+@use '../../../styles/modules/dropdown' as *;
+
+.dropdown-items {
+  position: absolute;
+  top: calc(100% + 10px);
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.1s ease-in-out;
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &--up {
+    top: auto;
+    bottom: calc(100% + 10px);
+  }
+
+  &--right {
+    right: -14px;
+  }
+
+  &--left {
+    left: 0;
+  }
+
+  &--fluid {
+    min-width: auto;
+    width: 100%;
+  }
+
+  &__container {
+    position: relative;
+    min-width: 10rem;
+    padding: 6px 0;
+    background-color: var(--background-secondary-color);
+    border: 1px solid var(--border-grey-color);
+    border-radius: var(--card-border-radius);
+
+    .dropdown-items--fluid & {
+      min-width: auto;
+    }
+
+    @extend %dropdownArrow;
+
+    .dropdown-items--left & {
+      &::before,
+      &::after {
+        left: 15px;
+      }
+    }
+
+    .dropdown-items--right & {
+      &::before,
+      &::after {
+        left: calc(100% - 15px);
+      }
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 8px 17px;
+    font-weight: normal;
+    text-align: left;
+    color: inherit;
+    transition: var(--t-base);
+    outline: none;
+    white-space: nowrap;
+
+    .input-group & {
+      padding-right: var(--input-gutter-x);
+      padding-left: var(--input-gutter-x);
+    }
+
+    &:hover {
+      color: inherit;
+      background-color: var(--grey-light-color-1);
+    }
+
+    &:active {
+      background-color: var(--grey-light-color-2);
+    }
+
+    :global([data-theme=dark]) & {
+      &:hover {
+        background-color: var(--background-primary-color);
+      }
+
+      &:active {
+        background-color: var(--control-background-active);
+      }
+    }
+  }
+
+  &__link-icon {
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    height: 22px;
+    margin-left: -0.55rem;
+    line-height: 1;
+
+    svg {
+      width: 22px;
+      height: 100%;
+    }
+  }
+}

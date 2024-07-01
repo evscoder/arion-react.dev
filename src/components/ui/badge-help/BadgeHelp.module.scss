@@ -1,0 +1,13 @@
+.badge-help {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  margin-top: -4px;
+  cursor: pointer;
+  color: var(--text-secondary-color);
+
+  svg[class*="icon"] {
+    height: 16px;
+    width: 100%;
+  }
+}

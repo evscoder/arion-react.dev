@@ -1,0 +1,29 @@
+@use '../../../styles/include/plugins' as *;
+
+.page-tools {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.1333rem;
+
+  @include media('<sm') {
+    margin-bottom: 1.5rem;
+  }
+
+  &__breadcrumbs {
+    align-self: flex-end;
+  }
+
+  &__right {
+    display: flex;
+    margin-left: auto;
+  }
+
+  &__right-row {
+    display: flex;
+    margin-left: calc(var(--container-gutter-sm) * -1);
+  }
+
+  &__right-item {
+    margin-left: var(--container-gutter-sm);
+  }
+}

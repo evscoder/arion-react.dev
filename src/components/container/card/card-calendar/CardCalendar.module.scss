@@ -1,0 +1,9 @@
+@use '../../../../styles/include/plugins' as *;
+
+.card-calendar {
+  min-width: 280px;
+
+  @include media('<sm-tablet') {
+    flex-grow: 1;
+  }
+}

@@ -1,0 +1,11 @@
+@use '../../../../styles/include/plugins' as *;
+@use '../../../ui/dropdown-item/DropdownItem.module.scss' as *;
+
+.card-week {
+  flex-grow: 0;
+  width: 150px;
+
+  @include media('<sm') {
+    flex-grow: 1;
+  }
+}

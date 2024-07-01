@@ -1,0 +1,61 @@
+@use '../../../styles/include/plugins' as *;
+
+.subheader {
+  position: fixed;
+  top: var(--header-height);
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  width: calc(100% - var(--sidebar-full-width));
+  height: var(--subheader-height);
+  border-bottom: 1px solid var(--border-grey-color);
+  background-color: var(--background-secondary-color);
+  transition: var(--t-base);
+  transition-timing-function: linear;
+  transition-property: width transform;
+
+  @include media('>xl') {
+    .sidebar-collapse & {
+      width: calc(100% - var(--sidebar-collapse-width));
+    }
+  }
+
+  @include media('<xl') {
+    transition-property: transform;
+  }
+
+  @include media('<xl', '>sm-tablet') {
+    width: calc(100% - var(--sidebar-collapse-width));
+
+    .sidebar-show & {
+      transform: translateX(calc(var(--sidebar-full-width) - var(--sidebar-collapse-width)));
+    }
+  }
+
+  @include media('<sm-tablet') {
+    width: 100%;
+
+    .sidebar-show & {
+      width: 100%;
+      transform: translateX(var(--sidebar-full-width));
+    }
+  }
+
+  .toggle-sidebar {
+    align-self: center;
+    height: calc(var(--subheader-height) - 4px);
+    width: calc(var(--subheader-height) - 4px);
+    margin: 0 18px 0 8px;
+
+    @include media('>sm-tablet') {
+      height: calc(var(--subheader-height) - 14px);
+      width: calc(var(--subheader-height) - 14px);
+      margin: 0 52px 0 5px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 0;
+  }
+}
