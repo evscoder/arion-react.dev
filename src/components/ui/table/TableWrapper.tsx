@@ -5,17 +5,19 @@ import SimpleBar from 'simplebar-react';
 import cn from 'clsx';
 
 interface Props {
-    collapse: boolean,
-    children: React.ReactNode
+    collapse?: boolean,
+    children: React.ReactNode,
+    bottom?: boolean,
+    classNames?: string
 }
 
-const TableWrapper: FC<Props> = ({ children, collapse }) => {
+const TableWrapper: FC<Props> = ({ children, collapse, bottom, classNames  }) => {
     return (
-        <div className={s.tableWrapper}>
+        <div className={cn(s.tableWrapper, classNames)}>
             <SimpleBar className={cn(s.tableWrapper__content, collapse && s.tableCollapse, 'scrollbar-thin scrollbar-visible')}>
                 {children}
             </SimpleBar>
-            <div className={s.tableWrapper__footer}>
+            {bottom && <div className={s.tableWrapper__footer}>
                 <div className={'row'}>
                     <div className={cn(s.tableWrapper__showResult, 'col text-grey')}>
                         <span className="d-none d-sm-inline-block">Showing</span> 1 to 10 <span className="d-none d-sm-inline-block">of 50 items</span>
@@ -24,7 +26,7 @@ const TableWrapper: FC<Props> = ({ children, collapse }) => {
                         <Pagination />
                     </div>
                 </div>
-            </div>
+            </div>}
         </div>
     );
 };

@@ -512,266 +512,178 @@ const dashboardData = {
             id: 'table-transaction',
             head: [
                 {
-                    title: 'Order No.',
-                    nowrap: true
+                    id: 1,
+                    title: 'Order No.'
                 }, {
+                    id: 12,
                     title: 'Name'
                 }, {
+                    id: 13,
                     title: 'Date'
                 }, {
+                    id: 14,
                     title: 'Amount'
                 }, {
+                    id: 15,
                     title: 'Address'
                 }, {
+                    id: 16,
                     title: 'Status'
-                }, {
-                    actions: true
                 }
             ],
             rows: [
-                [
-                    {
-                        textGray: true,
-                        value: '#790841'
-                    }, {
-                    media: {
+                {
+                    id: 1,
+                    order: '#790841',
+                    name: {
                         color: 'orange',
                         avatarTitle: 'WS',
                         avatar: 'humans/item-4.jpg',
                         title: 'Walter Sanders'
-                    }
-                }, {
-                    textGray: true,
-                    value: '12.07.2018'
-                }, {
-                    value: '$700'
-                }, {
-                    textGray: true,
-                    value: 'Winding Way West, RI 3261, US'
-                }, {
+                    },
+                    date: '12.07.2018',
+                    amount: '$700',
+                    address: 'Winding Way West, RI 3261, US',
                     status: {
                         color: 'green',
                         value: 'Paid'
                     }
-                }, {
-                    actions: true
+                },
+                {
+                    id: 11,
+                    order: '#781208',
+                    name: {
+                        color: 'blue',
+                        avatarTitle: 'MA',
+                        avatar: 'humans/item-6.jpg',
+                        title: 'Mark Anderson'
+                    },
+                    date: '15.07.2018',
+                    amount: '$500',
+                    address: 'arvis Street Portville, NY 2596, US',
+                    status: {
+                        color: 'green',
+                        value: 'Paid'
+                    }
+                },
+                {
+                    id: 111,
+                    order: '#987120',
+                    name: {
+                        color: 'green',
+                        avatarTitle: 'PG',
+                        avatar: 'humans/item-3.jpg',
+                        title: 'Pamela Garza'
+                    },
+                    date: '17.07.2018',
+                    amount: '$800',
+                    address: 'Calico Drive Ellensburg, WA 5572, US',
+                    status: {
+                        color: 'red',
+                        value: 'Canceled'
+                    }
+                },
+                {
+                    id: 1111,
+                    order: '#871023',
+                    name: {
+                        color: 'red',
+                        avatarTitle: 'WS',
+                        avatar: 'humans/item-9.jpg',
+                        title: 'Walter Sanders'
+                    },
+                    date: '18.07.2018',
+                    amount: '$1,000',
+                    address: 'Randall Drive Pahala, HI 7289, US',
+                    status: {
+                        color: 'green',
+                        value: 'Paid'
+                    }
+                },
+                {
+                    id: 12,
+                    order: '#871023',
+                    name: {
+                        color: 'orange',
+                        avatarTitle: 'RH',
+                        avatar: 'humans/item-5.jpg',
+                        title: 'Ryan Henderson'
+                    },
+                    date: '22.07.2018',
+                    amount: '$900',
+                    address: 'Archwood Newcastle, WY 1139, US',
+                    status: {
+                        color: 'green',
+                        value: 'Paid'
+                    }
+                },
+                {
+                    id: 122,
+                    order: '#922309',
+                    name: {
+                        color: 'blue',
+                        avatarTitle: 'SA',
+                        title: 'Stephen Allen'
+                    },
+                    date: '25.07.2018',
+                    amount: '$3,000',
+                    address: 'Park Boulevard Oskaloosa, IA 4814, US',
+                    status: {
+                        color: 'blue',
+                        value: 'Pending'
+                    }
+                },
+                {
+                    id: 133,
+                    order: '#892107',
+                    name: {
+                        color: 'red',
+                        avatarTitle: 'JT',
+                        avatar: 'humans/item-1.jpg',
+                        title: 'Jennifer Tang'
+                    },
+                    date: '27.07.2018',
+                    amount: '$1,000',
+                    address: 'Harvest Lane Eagleville, MO 9818, US',
+                    status: {
+                        color: 'green',
+                        value: 'Paid'
+                    }
+                },
+                {
+                    id: 144,
+                    order: '#902370',
+                    name: {
+                        color: 'green',
+                        avatarTitle: 'SH',
+                        avatar: 'humans/item-2.jpg',
+                        title: 'Sophia Hale'
+                    },
+                    date: '22.07.2018',
+                    amount: '$900',
+                    address: 'Archwood Newcastle, WY 1139, US',
+                    status: {
+                        color: 'blue',
+                        value: 'Pending'
+                    }
+                },
+                {
+                    id: 123,
+                    order: '#781208',
+                    name: {
+                        color: 'orange',
+                        avatarTitle: 'MA',
+                        avatar: 'humans/item-6.jpg',
+                        title: 'Mark Anderson'
+                    },
+                    date: '24.07.2018',
+                    amount: '$800',
+                    address: 'Jarvis Street Portville, NY 2596, US',
+                    status: {
+                        color: 'green',
+                        value: 'Paid'
+                    }
                 }
-                ], [
-                    {
-                        textGray: true,
-                        value: '#781208'
-                    }, {
-                        media: {
-                            color: 'blue',
-                            avatarTitle: 'MA',
-                            avatar: 'humans/item-6.jpg',
-                            title: 'Mark Anderson'
-                        }
-                    }, {
-                        textGray: true,
-                        value: '15.07.2018'
-                    }, {
-                        value: '$500'
-                    }, {
-                        textGray: true,
-                        value: 'arvis Street Portville, NY 2596, US'
-                    }, {
-                        status: {
-                            color: 'green',
-                            value: 'Paid'
-                        }
-                    }, {
-                        actions: true
-                    }
-                ], [
-                    {
-                        textGray: true,
-                        value: '#987120'
-                    }, {
-                        media: {
-                            color: 'green',
-                            avatarTitle: 'PG',
-                            avatar: 'humans/item-3.jpg',
-                            title: 'Pamela Garza'
-                        }
-                    }, {
-                        textGray: true,
-                        value: '17.07.2018'
-                    }, {
-                        value: '$800'
-                    }, {
-                        textGray: true,
-                        value: 'Calico Drive Ellensburg, WA 5572, US'
-                    }, {
-                        status: {
-                            color: 'red',
-                            value: 'Canceled'
-                        }
-                    }, {
-                        actions: true
-                    }
-                ], [
-                    {
-                        textGray: true,
-                        value: '#871023'
-                    }, {
-                        media: {
-                            color: 'red',
-                            avatarTitle: 'WS',
-                            avatar: 'humans/item-9.jpg',
-                            title: 'Walter Sanders'
-                        }
-                    }, {
-                        textGray: true,
-                        value: '18.07.2018'
-                    }, {
-                        value: '$1,000'
-                    }, {
-                        textGray: true,
-                        value: 'Randall Drive Pahala, HI 7289, US'
-                    }, {
-                        status: {
-                            color: 'green',
-                            value: 'Paid'
-                        }
-                    }, {
-                        actions: true
-                    }
-                ], [
-                    {
-                        textGray: true,
-                        value: '#902370'
-                    }, {
-                        media: {
-                            color: 'orange',
-                            avatarTitle: 'RH',
-                            avatar: 'humans/item-5.jpg',
-                            title: 'Ryan Henderson'
-                        }
-                    }, {
-                        textGray: true,
-                        value: '22.07.2018'
-                    }, {
-                        value: '$900'
-                    }, {
-                        textGray: true,
-                        value: 'Archwood Newcastle, WY 1139, US'
-                    }, {
-                        status: {
-                            color: 'green',
-                            value: 'Paid'
-                        }
-                    }, {
-                        actions: true
-                    }
-                ], [
-                    {
-                        textGray: true,
-                        value: '#922309'
-                    }, {
-                        media: {
-                            color: 'blue',
-                            avatarTitle: 'SA',
-                            title: 'Stephen Allen'
-                        }
-                    }, {
-                        textGray: true,
-                        value: '25.07.2018'
-                    }, {
-                        value: '$3,000'
-                    }, {
-                        textGray: true,
-                        value: 'Park Boulevard Oskaloosa, IA 4814, US'
-                    }, {
-                        status: {
-                            color: 'blue',
-                            value: 'Pending'
-                        }
-                    }, {
-                        actions: true
-                    }
-                ], [
-                    {
-                        textGray: true,
-                        value: '#892107'
-                    }, {
-                        media: {
-                            color: 'red',
-                            avatarTitle: 'JT',
-                            avatar: 'humans/item-1.jpg',
-                            title: 'Jennifer Tang'
-                        }
-                    }, {
-                        textGray: true,
-                        value: '27.07.2018'
-                    }, {
-                        value: '$1,000'
-                    }, {
-                        textGray: true,
-                        value: 'Harvest Lane Eagleville, MO 9818, US'
-                    }, {
-                        status: {
-                            color: 'green',
-                            value: 'Paid'
-                        }
-                    }, {
-                        actions: true
-                    }
-                ], [
-                    {
-                        textGray: true,
-                        value: '#902370'
-                    }, {
-                        media: {
-                            color: 'green',
-                            avatarTitle: 'SH',
-                            avatar: 'humans/item-2.jpg',
-                            title: 'Sophia Hale'
-                        }
-                    }, {
-                        textGray: true,
-                        value: '22.07.2018'
-                    }, {
-                        value: '$900'
-                    }, {
-                        textGray: true,
-                        value: 'Archwood Newcastle, WY 1139, US'
-                    }, {
-                        status: {
-                            color: 'blue',
-                            value: 'Pending'
-                        }
-                    }, {
-                        actions: true
-                    }
-                ], [
-                    {
-                        textGray: true,
-                        value: '#781208'
-                    }, {
-                        media: {
-                            color: 'orange',
-                            avatarTitle: 'MA',
-                            avatar: 'humans/item-6.jpg',
-                            title: 'Mark Anderson'
-                        }
-                    }, {
-                        textGray: true,
-                        value: '24.07.2018'
-                    }, {
-                        value: '$800'
-                    }, {
-                        textGray: true,
-                        value: 'Jarvis Street Portville, NY 2596, US'
-                    }, {
-                        status: {
-                            color: 'green',
-                            value: 'Paid'
-                        }
-                    }, {
-                        actions: true
-                    }
-                ]
             ]
         }
     },

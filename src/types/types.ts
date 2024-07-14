@@ -238,33 +238,3 @@ export type MediaItemProps = {
     title: string
 }
 
-export type TableProps = {
-    lines?: boolean,
-    striped?: boolean,
-    groups?: boolean,
-    spaces?: boolean,
-    sticky?: boolean,
-    classNames?: string,
-    itemsMoreRef?: any,
-    onToggleMore: (event: any) => void;
-    data: {
-        id: string,
-        head: {
-            sort?: boolean,
-            title: string,
-            nowrap?: boolean,
-            actions?: boolean
-        }[]
-        rows: {
-            value?: string,
-            textGray?: boolean,
-            status?: {
-                color: ColorsProps | string,
-                value: string
-            },
-            media?: MediaItemProps,
-            actions?: DropdownItemsProps
-        }[][]
-    }
-}
-
